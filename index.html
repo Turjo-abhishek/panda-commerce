@@ -135,6 +135,7 @@
             type="button"
             data-bs-target="#carouselExampleControls"
             data-bs-slide="prev"
+            onclick="show()"
           >
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -223,11 +224,11 @@
         <!-- shoes section end -->
         <!-- bags section start -->
         <section class="container my-5" id="backpack">
-            <h2>Shoes</h2>
+            <h2>Bags</h2>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                 <div class="col">
                   <div class="card border border-0 shadow h-100">
-                    <img src="images/bags/bag-1.png" class="card-img-top" alt="...">
+                    <img onmouseenter="imageChange(this)" onmouseleave="firstImage(this)" src="images/bags/bag-1.png" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Red Laltu Bag</h5>
                       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -279,7 +280,7 @@
                     <div class="mb-2">
                       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button id="submit-btn" type="submit" class="btn btn-primary" disabled>Submit</button>
                   </form>
             </div>
         </section>
@@ -294,5 +295,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
